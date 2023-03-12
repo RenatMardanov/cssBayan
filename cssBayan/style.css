@@ -75,28 +75,33 @@
     width: 340px;
     height: 340px;
     margin-bottom: 1rem;
+    
 }
 
 .accordion-input:checked ~ .accordion-description {
     max-height: 25rem;
     opacity: 1;
     transition: all 0.5s ease-in-out;
+
 }
-.accordion-input:hover .accordion-input:checked  ~ .accordion-description {
+
+.accordion-input:hover {
     max-height: 25rem;
     opacity: 1;
     transition: all 0.5s ease-in-out;
-
 }
+
+
 .accordion-input:checked ~ .accordion-icon {
     transform: rotate(45deg);
     transition: all 0.5s ease-in-out;
 }
 
-.title:hover + .accordion-input:checked {
+.title:hover  {
     max-height: 25rem;
     opacity: 1;
     transition: all 0.5s ease-in-out;
+    color: rebeccapurple;
 }
 
 
@@ -109,6 +114,7 @@
     font-weight: 700;
     padding: 1rem 0;
     width: 95%;
+    
 
 }
 
