@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;700&family=Kanit:wght@400;500;700&family=Outfit:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap');
+
+.wrapper {
+    width: 80vw;
+    margin: 50px auto;
+    cursor: pointer;
+}
+
+.header {
+    border-bottom: 3px solid rgba(163, 177, 204, 0.577);
+    margin: 0;
+    margin-bottom: 2rem;
+    padding: 1rem 0;
+    font-size: 2.5rem;
+}
+
+
+
+.accordion {
+    border-bottom: 3px solid rgba(163, 177, 204, 0.577);
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+
+}
+
+.accordion-input {
+    appearance: none;
+    -webkit-appearance: none;
+    position: absolute;
+}
+
+.accordion-icon {
+    position: relative;
+    display: block;
+    align-self: center;
+    width: 30px;
+    height: 30px;
+    transition: all 0.5s ease-out;
+
+
+}
+
+.accordion-icon::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 2px;
+    background-color: #000;
+}
+
+.accordion-icon::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 2px;
+    height: 50%;
+    background-color: #000;
+}
+
+
+.accordion-description {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-bottom: 1rem;
+    width: 100%;
+    max-height: 0;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+    transition: all 0.5s ease-out;
+}
+
+
+.accordion-image {
+    width: 340px;
+    height: 340px;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+
+
+}
+
+.accordion-input:checked~.accordion-description {
+    max-height: 25rem;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+
+}
+
+.accordion:hover .accordion-description {
+    max-height: 25rem;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+.accordion:hover .accordion-icon {
+    transform: rotate(45deg);
+    transition: all 0.5s ease-in-out;
+}
+
+.accordion-input:checked~.accordion-icon {
+    transform: rotate(45deg);
+    transition: all 0.5s ease-in-out;
+}
+
+.title:hover {
+    max-height: 25rem;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+    color: rebeccapurple;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem 0;
+    width: 95%;
+    color: rebeccapurple;
+    position: relative;
+    z-index: 5;
+}
+
+.accordion-input:not(:checked)~.title {
+    color: #513636;
+}
+
+.accordion-input:not(:checked):not(:hover)~.accordion-description {
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.accordion-input:not(:checked)~.accordion-icon {
+    transform: rotate(0deg);
+    transition: all 0.5s ease-out;
+}
+
+.accordion-input:checked~.title:hover+.accordion-icon {
+    transform: rotate(45deg);
+    transition: all 0.5s ease-in-out;
+}
+
+.wrapper:hover .accordion-icon {
+    opacity: 1;
+}
+
+.wrapper .accordion-icon {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.accordion-input:checked~.accordion-icon {
+    transform: rotate(45deg);
+    transition: all 0.5s ease-in-out;
+}
+
+.accordion:hover .accordion-icon {
+    transform: rotate(45deg);
+    transition: all 0.5s ease-in-out;
+}
+
+.accordion-one__title {
+    font-family: 'DM Sans', sans-serif;
+}
+
+.accordion-two__title {
+    font-family: 'Inter', sans-serif;
+}
+
+.accordion-three__title {
+    font-family: 'Kanit', sans-serif;
+}
+
+.accordion-four__title {
+    font-family: 'Outfit', sans-serif;
+}
+
+.accordion-five__title {
+    font-family: 'Poppins', sans-serif;
+}
+
+@media screen and (max-width: 860px) {
+    .accordion-image {
+        width: 240px;
+        height: 240px;
+        margin-bottom: 0.8rem;
+        position: relative;
+        z-index: 1;
+    }
+
+    .accordion-icon {
+        position: relative;
+        display: block;
+        align-self: center;
+        width: 20px;
+        height: 20px;
+        transition: all 0.5s ease-out;
+
+
+    }
+   
+
+    .accordion-icon::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        height: 2px;
+        background-color: #000;
+    }
+
+    .accordion-icon::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 2px;
+        height: 50%;
+        background-color: #000;
+    }
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        font-size: 1.5rem;
+        font-weight: 700;
+        padding: 0.8rem 0;
+        width: 95%;
+        color: rebeccapurple;
+        position: relative;
+        z-index: 5;
+    }
+
+    .accordion-input:checked~.accordion-description {
+        max-height: 25rem;
+        opacity: 1;
+        transition: all 0.5s ease-in-out;
+
+    }
+
+    .accordion:hover .accordion-description {
+        max-height: 25rem;
+        opacity: 1;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .accordion:hover .accordion-icon {
+        transform: rotate(45deg);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .accordion-input:checked~.accordion-icon {
+        transform: rotate(45deg);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .title:hover {
+        max-height: 25rem;
+        opacity: 1;
+        transition: all 0.5s ease-in-out;
+        color: rebeccapurple;
+    }
+
+    .accordion-input:not(:checked)~.title {
+        color: #513636;
+    }
+
+    .accordion-input:not(:checked):not(:hover)~.accordion-description {
+        max-height: 0;
+        opacity: 0;
+        transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    }
+
+    .accordion-input:not(:checked)~.accordion-icon {
+        transform: rotate(0deg);
+        transition: all 0.5s ease-out;
+    }
+
+    .accordion-input:checked~.title:hover+.accordion-icon {
+        transform: rotate(45deg);
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+    .accordion-image {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 0.4rem;
+        position: relative;
+        z-index: 1;
+    }
+
+   
+
+    .accordion-icon {
+        position: relative;
+        display: block;
+        align-self: center;
+        width: 10px;
+        height: 10px;
+        transition: all 0.5s ease-out;
+
+
+    }
+
+    .accordion-icon::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        height: 2px;
+        background-color: #000;
+    }
+
+    .accordion-icon::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 2px;
+        height: 50%;
+        background-color: #000;
+    }
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        font-size: 0.8rem;
+        font-weight: 700;
+        padding: 0.4rem 0;
+        width: 95%;
+        color: rebeccapurple;
+        position: relative;
+        z-index: 5;
+    }
+
+    .accordion-input:checked~.accordion-description {
+        max-height: 12rem;
+        opacity: 1;
+        transition: all 0.5s ease-in-out;
+
+    }
+
+    .accordion:hover .accordion-description {
+        max-height: 12rem;
+        opacity: 1;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .accordion:hover .accordion-icon {
+        transform: rotate(45deg);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .accordion-input:checked~.accordion-icon {
+        transform: rotate(45deg);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .title:hover {
+        max-height: 12rem;
+        opacity: 1;
+        transition: all 0.5s ease-in-out;
+        color: rebeccapurple;
+    }
+
+    .accordion-input:not(:checked)~.title {
+        color: #513636;
+    }
+
+    .accordion-input:not(:checked):not(:hover)~.accordion-description {
+        max-height: 0;
+        opacity: 0;
+        transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    }
+
+    .accordion-input:not(:checked)~.accordion-icon {
+        transform: rotate(0deg);
+        transition: all 0.5s ease-out;
+    }
+
+    .accordion-input:checked~.title:hover+.accordion-icon {
+        transform: rotate(45deg);
+        transition: all 0.5s ease-in-out;
+    }
+}
