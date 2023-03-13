@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;700&family=Kanit:wght@400;500;700&family=Outfit:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap');
+
 .wrapper {
     width: 1280px;
     margin: 50px auto;
+    cursor: pointer;
 }
 
 .header {
@@ -33,6 +36,9 @@
     align-self: center;
     width: 30px;
     height: 30px;
+    transition: all 0.5s ease-out;
+
+    
 }
 
 .accordion-icon::before {
@@ -68,6 +74,7 @@
     opacity: 0;
     margin: 0;
     padding: 0;
+    transition: all 0.5s ease-out;
 }
 
 
@@ -75,6 +82,7 @@
     width: 340px;
     height: 340px;
     margin-bottom: 1rem;
+
     
 }
 
@@ -85,12 +93,16 @@
 
 }
 
-.accordion-input:hover {
-    max-height: 25rem;
+.accordion:hover .accordion-description {
+    max-height: 25rem; 
     opacity: 1;
     transition: all 0.5s ease-in-out;
 }
 
+.accordion:hover .accordion-icon {
+    transform: rotate(45deg);
+    transition: all 0.5s ease-in-out;
+}
 
 .accordion-input:checked ~ .accordion-icon {
     transform: rotate(45deg);
@@ -104,7 +116,6 @@
     color: rebeccapurple;
 }
 
-
 .title {
     display: flex;
     flex-direction: column;
@@ -114,16 +125,46 @@
     font-weight: 700;
     padding: 1rem 0;
     width: 95%;
-    
-
+    color: rebeccapurple;
 }
 
-.accordion-one__title {}
+.accordion-input:not(:checked) ~ .title {
+    color: #513636;
+}
 
-.accordion-two__title {}
+.accordion-input:not(:checked):not(:hover) ~ .accordion-description {
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
 
-.accordion-three__title {}
+.accordion-input:not(:checked) ~ .accordion-icon {
+    transform: rotate(0deg);
+    transition: all 0.5s ease-out;
+}
 
-.accordion-four__title {}
+.accordion-input:checked ~ .title:hover + .accordion-icon {
+    transform: rotate(45deg);
+    transition: all 0.5s ease-in-out;
+}
 
-.accordion-five__title {}
+
+.accordion-one__title {
+    font-family: 'DM Sans', sans-serif;
+}
+
+.accordion-two__title {
+    font-family: 'Inter', sans-serif;
+}
+
+.accordion-three__title {
+    font-family: 'Kanit', sans-serif;
+}
+
+.accordion-four__title {
+    font-family: 'Outfit', sans-serif;
+}
+
+.accordion-five__title {
+    font-family: 'Poppins', sans-serif;
+}
