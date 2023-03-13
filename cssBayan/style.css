@@ -152,6 +152,24 @@
     transition: all 0.5s ease-in-out;
 }
 
+.wrapper:hover .accordion-icon {
+    opacity: 1;
+}
+
+.wrapper .accordion-icon {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.accordion-input:checked~.accordion-icon {
+    transform: rotate(45deg);
+    transition: all 0.5s ease-in-out;
+}
+
+.accordion:hover .accordion-icon {
+    transform: rotate(45deg);
+    transition: all 0.5s ease-in-out;
+}
 
 .accordion-one__title {
     font-family: 'DM Sans', sans-serif;
